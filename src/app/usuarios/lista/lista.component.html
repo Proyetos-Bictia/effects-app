@@ -1,4 +1,12 @@
-<div class="card-columns">
+
+<app-alert-success *ngIf="loading"></app-alert-success>
+
+<app-alert-error
+    *ngIf="err"
+    [err]="err"
+></app-alert-error>
+
+<div class="card-columns" *ngIf="!loading && !err">
 
     <div 
         class="card"

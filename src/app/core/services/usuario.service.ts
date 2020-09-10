@@ -13,7 +13,15 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    const urlFinal = `${this.url}/users`
+    const urlFinal = `${this.url}/users?delay=3`
+    return this.http.get(urlFinal)
+    .pipe(
+      map((results) => results['data'])
+    )
+  }
+
+  getUserById(id: string) {
+    const urlFinal = `${this.url}/users/${id}`
     return this.http.get(urlFinal)
     .pipe(
       map((results) => results['data'])

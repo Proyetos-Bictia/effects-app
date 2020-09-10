@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ListaComponent } from './lista/lista.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ListaComponent } from './lista/lista.component';
     UsuarioComponent, ListaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ]
 })
 export class UsuariosModule { }
